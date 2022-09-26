@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {} from "./style.css";
 
 import List from "./Contacts/List";
 import Form from "./Contacts/Form";
@@ -25,7 +26,8 @@ function Contacts() {
     console.log(contacts);
   }, [contacts]);
   return (
-    <div>
+    <div id="container">
+      <h1>Contacts</h1>
       <List contacts={contacts} />
       <Form setContacts={setContacts} contacts={contacts} />
     </div>

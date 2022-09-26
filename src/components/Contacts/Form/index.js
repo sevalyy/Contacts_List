@@ -30,25 +30,30 @@ function Form({ setContacts, contacts }) {
     console.log(form);
   };
   return (
-    <form onSubmit={onSubmit}>
-      <div>
-        <input
-          name="full_name"
-          placeholder="Full Name"
-          value={form.full_name}
-          onChange={onChangeInput}
-        ></input>
-      </div>
-      <div>
-        <input
-          name="phone_number"
-          placeholder="Phone Number"
-          value={form.phone_number}
-          onChange={onChangeInput}
-        ></input>
-      </div>
-      <button>Add</button>
-    </form>
+    <>
+      <h3> Add a New Contact</h3>
+      <form onSubmit={onSubmit}>
+        <div>
+          <input
+            name="full_name"
+            placeholder="Full Name"
+            value={form.full_name}
+            onChange={onChangeInput}
+          ></input>
+        </div>
+        <div>
+          <input
+            name="phone_number"
+            placeholder="Phone Number"
+            value={form.phone_number}
+            onChange={onChangeInput}
+          ></input>
+        </div>
+        <div className="btn">
+          <button>Add</button>
+        </div>
+      </form>
+    </>
   );
 }
 
